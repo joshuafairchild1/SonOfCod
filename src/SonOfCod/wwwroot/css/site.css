@@ -76,4 +76,28 @@ html, body {
     background-color: white;
     box-shadow: 3px 3px 2px 2px #d9d9d9;
     padding: 30px;
+    margin-top: 50px;
+}
+
+.sign-up {
+    width: 40%;
+    margin: 0 auto;
+    padding: 70px;
+    margin-top: 50px;
+}
+
+.member-list {
+    display: flex;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: space-between
+}
+
+.member-card {
+    width: 230px;
+}
+
+.subscribers-btn {
+    margin-top: 10px;
 }

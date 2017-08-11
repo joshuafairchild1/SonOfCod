@@ -3,16 +3,17 @@
     ViewData["Title"] = "Son of Cod Seafood - Newsletter Subscribers";
 }
 
-@foreach (var member in Model)
-{
-    <div>
-        <p>
-            @Html.DisplayFor(m => member.Name)
-        </p>
-        <p>
-            @Html.DisplayFor(m => member.Email)
-
-        </p>
+<div class="foreground">
+    <h3 class="text-center">Subscribers</h3>
+    <div class="member-list">
+        @foreach (var member in Model)
+        {
+            <div class="panel panel-default member-card">
+                <div class="panel-body">
+                    <h4>Name: @Html.DisplayFor(m => member.Name)</h4>
+                    <h4>Email: @Html.DisplayFor(m => member.Email)</h4>
+                </div>
+            </div>
+        }
     </div>
-
-}
+</div>

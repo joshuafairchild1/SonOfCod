@@ -4,35 +4,31 @@
     ViewData["Title"] = "Son of Cod Seafood - Newsletter";
 }
 
-<div class="row">
-    <div class="col-sm-6">
-        <h3>Sign up for the newsletter</h3>
-        @using (Html.BeginForm("SignUp", "Newsletter", FormMethod.Post))
+<div class="foreground sign-up">
+    <h3>Sign up for the newsletter</h3>
+    @using (Html.BeginForm("SignUp", "Newsletter", FormMethod.Post))
+    {
+        <div class="form-group">
+            @Html.LabelFor(m => m.Email)
+            @Html.TextBoxFor(m => m.Email, new { @class = "form-control", type = "email", required = "required" })
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Name)
+            @Html.TextBoxFor(m => m.Name, new { @class = "form-control", required = "required" })
+        </div>
+        <div class="form-group">
+            @Html.Label("Favorite type of fish")
+            <input class="form-control" required />
+        </div>
+        <input type="submit" value="Subscribe to newsletter" class="btn btn-primary btn-block" />
+    }
+    @if (User.Identity.IsAuthenticated)
+    {
+        @using (Html.BeginForm("Members", "Newsletter"))
         {
-            <div class="form-group">
-                @Html.LabelFor(m => m.Email)
-                @Html.TextBoxFor(m => m.Email, new { @class = "form-control", type = "email", required = "required " })
-            </div>
-            <div class="form-group">
-                @Html.LabelFor(m => m.Name)
-                @Html.TextBoxFor(m => m.Name, new { @class = "form-control", required = "required " })
-            </div>
-            <div class="form-group">
-                @Html.Label("Favorite type of fish")
-                <input class="form-control" required />
-            </div>
-            <input type="submit" value="Subscribe to newsletter" class="btn btn-primary" />
+            <input type="submit" value="View subscribers" class="subscribers-btn btn btn-info btn-block" />
         }
-    </div>
-    <div class="col-sm-6 text-center">
-        @if (User.Identity.IsAuthenticated)
-        {
-            @using (Html.BeginForm("Members", "Newsletter"))
-            {
-                <input type="submit" value="View subscribers" class="btn btn-primary" />
-            }
-        }
-    </div>
+    }
 </div>
 
 
