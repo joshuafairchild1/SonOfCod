@@ -8,7 +8,11 @@ namespace SonOfCod.Models
     {
         [Key]
         public int Id { get; set; }
+        [Required]
+        [StringLength(5)]
         public string Name { get; set; }
+        [EmailAddress]
+        [Required]
         public string Email { get; set; }
 
         public NewsletterMember(string name, string email)
