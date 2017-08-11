@@ -1,7 +1,7 @@
 # Son of Cod Seafood
 ### Joshua Fairchild, August 11th, 2017
 
-Description coming soon 💯
+This is an application that demonstrates user authentication and unit testing using the .NET framework. A user is able to put some information into a form to sign-up for an imaginary newsletter, and "Admin" users are able to login/create an account to view the users that are subscribed to the newsletter.
 
 ## Prerequisites
 
@@ -24,25 +24,10 @@ You will need the following software properly installed on your computer.
 
   `$ cd .\src\SonOfCod\`
 
-  `$ dotnet ef database update`
+  `$ dotnet ef database update 20170811202132_AddNewsletterModel`
 
 * You can now view the application by pressing Ctrl + F5 in Visual Studio, you will be navigated to the application in your web browser.
 
-<!-- ## (Optional) Preloading the Database
-
-If you wish to load the database with content, a SQL script has been provided that will do just that.
-
-* Open Microsoft SQL Server.
-
-* Select File > Open > File and open `dbcontent.sql` from the root directory
-
-* If the database does not already exist, add the following lines to the top of the script file:
-
-  `CREATE DATABASE GummyBearKingdom;`
-
-  `GO`
-
-* Save the file and click "! Execute" (F5) -->
 
 ## Built With
 
