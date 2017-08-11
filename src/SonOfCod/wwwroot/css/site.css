@@ -1,6 +1,7 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
+    background-color: #f2f2f2;
 }
 
 /* Wrapping element */
@@ -17,28 +18,62 @@ textarea {
     max-width: 280px;
 }
 
-/* Carousel */
-.carousel-caption p {
-    font-size: 20px;
-    line-height: 1.4;
+
+
+.navbar {
+    background-color: #f2f2f2;
 }
-
-/* Make .svg files in the carousel display properly in older browsers */
-.carousel-inner .item img[src$=".svg"]
-{
-    width: 100%;
-}
-
-/* Hide/rearrange for smaller screens */
-@media screen and (max-width: 767px) {
-  /* Hide captions */
-  .carousel-caption {
-    display: none
-  }
-}
-
-
 
 html, body {
     height: 100%;
+}
+
+.nav li a {
+    color: black;
+    font-family: oswald;
+    font-size: 1.6em;
+}
+
+.navbar-brand {
+    font-weight: bolder;
+    color: black;
+    font-size: 2em;
+}
+
+.main-img {
+    border: solid 3px black;
+    max-width: 100%;
+    border-radius: 4px;
+}
+
+.stock-img {
+    max-width: 100%;
+    border-radius: 6px;
+}
+
+.description {
+    color: #584c40;
+}
+
+.description h1 {
+    margin-top: 40px;
+}
+
+.more-info {
+    margin-top: 40px;
+    font-family: montserrat;
+}
+
+.more-info h3 {
+    color: #005cb9;
+}
+
+.description p {
+    font-size: 1.2em;
+}
+
+.foreground {
+    background-color: white;
+    box-shadow: 3px 3px 2px 2px #d9d9d9;
+    padding: 30px;
 }

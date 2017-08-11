@@ -6,6 +6,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"]</title>
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 
     <environment names="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
@@ -20,7 +22,7 @@
     @Html.ApplicationInsightsJavaScript(TelemetryConfiguration)
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -29,34 +31,27 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">SonOfCod</a>
+                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">Son of Cod Seafood</a>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
-                    <li><a asp-controller="Admin" asp-action="Index">Admin</a></li>
                     <li><a asp-controller="Newsletter" asp-action="Index">Newsletter</a></li>
-                    @*<li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>*@
-                    @*<li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>*@
                 </ul>
-                @if (User.Identity.IsAuthenticated)
-                {
-                    <ul class="navbar navbar-nav navbar-right">
-                        <li>
-                            <a>
-                                <p>
-                                    Administrator: <strong>@User.Identity.Name</strong>
-                                </p>
-                            </a>
-                        </li>
-                        <li>
-                            @using (Html.BeginForm("LogOff", "Admin"))
-                            {
-                                <input type="submit" class="btn btn-default btn-xs" value="Log out" />
-                            }
-                        </li>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a asp-controller="Admin" asp-action="Index">Admin</a></li>
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            <li>
+                                <a>Administrator: <strong>@User.Identity.Name</strong></a>
+                            </li>
+                            <li>
+                                @using (Html.BeginForm("LogOff", "Admin"))
+                                {
+                                    <input type="submit" class="btn btn-default btn-xs" value="Log out" />
+                                }
+                            </li>
+                        }
                     </ul>
-                }
             </div>
         </div>
     </div>
