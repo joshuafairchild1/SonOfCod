@@ -1,0 +1,18 @@
+﻿@model List<SonOfCod.Models.NewsletterMember>
+@{
+    ViewData["Title"] = "Son of Cod Seafood - Newsletter Subscribers";
+}
+
+@foreach (var member in Model)
+{
+    <div>
+        <p>
+            @Html.DisplayFor(m => member.Name)
+        </p>
+        <p>
+            @Html.DisplayFor(m => member.Email)
+
+        </p>
+    </div>
+
+}

@@ -39,17 +39,24 @@
                     @*<li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>*@
                     @*<li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>*@
                 </ul>
-                <ul class="navbar navbar-nav navbar-right">
-                    <li>
-                        <a>
-
-                        @if (User.Identity.IsAuthenticated)
-                        {
-                            <p>Administrator: <strong>@User.Identity.Name</strong></p>
-                        }
-                        </a>
-                    </li>
-                </ul>
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <ul class="navbar navbar-nav navbar-right">
+                        <li>
+                            <a>
+                                <p>
+                                    Administrator: <strong>@User.Identity.Name</strong>
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            @using (Html.BeginForm("LogOff", "Admin"))
+                            {
+                                <input type="submit" class="btn btn-default btn-xs" value="Log out" />
+                            }
+                        </li>
+                    </ul>
+                }
             </div>
         </div>
     </div>

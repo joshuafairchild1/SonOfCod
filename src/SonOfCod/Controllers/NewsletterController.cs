@@ -1,5 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using SonOfCod.Models;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace SonOfCod.Controllers
 {
@@ -25,6 +28,13 @@ namespace SonOfCod.Controllers
             _db.SaveChanges();
 
             return RedirectToAction("Index", "Home");
+        }
+
+        [Authorize]
+        public IActionResult Members()
+        {
+            List<NewsletterMember> members = _db.NewsletterMembers.ToList();
+            return View(members);
         }
     }
 }
