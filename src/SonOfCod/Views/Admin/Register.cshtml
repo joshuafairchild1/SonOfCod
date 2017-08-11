@@ -1,0 +1,21 @@
+﻿@using SonOfCod.ViewModels
+@model RegisterViewModel
+@{
+    ViewData["Title"] = "Son of Cod Seafood - Administrator";
+}
+
+<h2>Create administrator account</h2>
+<hr />
+@using (Html.BeginForm("Register", "Admin", FormMethod.Post))
+{
+    @Html.LabelFor(m => m.Username)
+    @Html.TextBoxFor(m => m.Username)
+
+    @Html.LabelFor(m => m.Password)
+    @Html.PasswordFor(m => m.Password)
+
+    @Html.LabelFor(m => m.ConfirmPassword)
+    @Html.PasswordFor(m => m.ConfirmPassword)
+
+    <input type="submit" value="Register" class="btn btn-primary"/>
+}

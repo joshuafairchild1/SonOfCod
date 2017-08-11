@@ -1,9 +1,11 @@
-﻿<!DOCTYPE html>
+﻿@using System.Security.Claims
+
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - SonOfCod</title>
+    <title>@ViewData["Title"]</title>
 
     <environment names="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
@@ -32,8 +34,20 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
+                    <li><a asp-controller="Admin" asp-action="Index">Admin</a></li>
                     @*<li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>*@
                     @*<li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>*@
+                </ul>
+                <ul class="navbar navbar-nav navbar-right">
+                    <li>
+                        <a>
+
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            <p>Administrator: <strong>@User.Identity.Name</strong></p>
+                        }
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
