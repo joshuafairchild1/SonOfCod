@@ -3,15 +3,15 @@
 
 This is an application that demonstrates user authentication and unit testing using the .NET framework. A user is able to put some information into a form to sign-up for an imaginary newsletter, and "Admin" users are able to login/create an account to view the users that are subscribed to the newsletter.
 
-## Screenshots
+<!-- ## Screenshots
 #### Landing/Marketing Page
-![](src/SonOfCod/wwwroot/images/scrn1.png)
+![](src/SonOfCod/wwwroot/images/scrn1.png) -->
 
-#### Newsletter Signup
-![](src/SonOfCod/wwwroot/images/scrn2.png)
+<!-- #### Newsletter Signup
+![](src/SonOfCod/wwwroot/images/scrn2.png) -->
 
-#### Subscriber List
-![](src/SonOfCod/wwwroot/images/scrn3.png)
+<!-- #### Subscriber List
+![](src/SonOfCod/wwwroot/images/scrn3.png) -->
 
 ## Prerequisites
 
