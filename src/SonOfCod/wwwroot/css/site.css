@@ -74,7 +74,7 @@ html, body {
 
 .foreground {
     background-color: white;
-    box-shadow: 3px 3px 2px 2px #d9d9d9;
+    box-shadow: 6px 6px 5px #e8e8e8;
     padding: 30px;
     margin-top: 50px;
 }

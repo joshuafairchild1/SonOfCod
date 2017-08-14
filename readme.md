@@ -5,14 +5,13 @@ This is an application that demonstrates user authentication and unit testing us
 
 ## Screenshots
 #### Landing/Marketing Page
-![](src/SonOfCod/wwwroot/images/scrn1.png?raw=true)
-![]()
+![](src/SonOfCod/wwwroot/images/scrn1.png)
 
 #### Newsletter Signup
-![](src/SonOfCod/wwwroot/images/scrn2.png?raw=true)
+![](src/SonOfCod/wwwroot/images/scrn2.png)
 
 #### Subscriber List
-![](src/SonOfCod/wwwroot/images/scrn3.png?raw=true)
+![](src/SonOfCod/wwwroot/images/scrn3.png)
 
 ## Prerequisites
 

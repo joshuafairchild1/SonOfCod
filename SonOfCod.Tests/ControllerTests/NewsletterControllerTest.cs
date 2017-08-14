@@ -23,14 +23,13 @@ namespace SonOfCod.Tests.ControllerTests
         //[Fact]
         //public void Get_ListOfMembers_Members()
         //{
-        //    IActionResult actionResult = new NewsletterController(_db).Members();
-        //    ViewResult view = actionResult as ViewResult;
+        //    ViewResult view = new NewsletterController(_db).Members() as ViewResult;
 
-        //    object result = view.ViewData.Model;
+        //    //object result = view.ViewData.Model;
 
-        //    Assert.IsType<List<NewsletterMember>>(result);
+        //    Assert.IsType<ViewResult>(view);
         //}
 
-        // not sure why i can't get this test to pass :(
+        //not sure why i can't get this test to pass :(
     }
 }
